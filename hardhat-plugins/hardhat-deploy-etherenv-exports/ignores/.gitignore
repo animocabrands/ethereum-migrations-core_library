@@ -1,0 +1,3 @@
+# hardhat-deploy-etherenv-exports
+exports/localhost*
+exports/hardhat*

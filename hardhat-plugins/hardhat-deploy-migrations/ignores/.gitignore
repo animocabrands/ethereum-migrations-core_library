@@ -1,0 +1,4 @@
+# hardhat-deploy-migrations
+generated/localhost*
+generated/hardhat*
+.mnemonic*

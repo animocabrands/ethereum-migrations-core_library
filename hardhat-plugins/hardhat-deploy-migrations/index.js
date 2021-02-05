@@ -1,4 +1,5 @@
 const yesno = require('yesno');
+const {formatUnits} = require('ethers/lib/utils');
 const {extendConfig, subtask} = require('hardhat/config');
 const {normalizePath} = require('../helpers');
 const {TASK_DEPLOY_RUN_DEPLOY} = require('../hardhat-deploy-task-names');
@@ -26,11 +27,13 @@ subtask(TASK_DEPLOY_RUN_DEPLOY, async (taskArguments, hre, runSuper) => {
     }
   }
 
-  console.log(taskArguments);
-
-  if (chainId == '1' || chainId == '137' || hre.network.tags.production) {
+  if (chainId == '1' || chainId == '137') {
+    if (taskArguments.gasprice === undefined) {
+      console.log('Please provide a --gasprice argument for production networks');
+      process.exit();
+    }
     const sure = await yesno({
-      question: 'This is a production network, are you really sure? (DO NOT FORGET the --gasprice arg !!!)',
+      question: `This is a production network, are you really sure? (gasprice ${formatUnits(taskArguments.gasprice)} gwei)`,
     });
     if (!sure) {
       process.exit();

@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-migrations-core_library",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Common configs and functions for migrations projects based on hardhat-deploy",
   "repository": "git@github.com:animocabrands/ethereum-migrations-core_library.git",
   "author": "Animoca Brands",
@@ -8,13 +8,13 @@
   "dependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.1",
     "@nomiclabs/hardhat-etherscan": "^2.1.1",
-    "cli-progress": "^3.8.2",
+    "cli-progress": "^3.9.0",
     "cross-env": "^7.0.3",
     "dotenv": "^8.2.0",
-    "eslint": "^7.17.0",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^9.1.0",
     "ganache-cli": "^6.12.2",
     "hardhat-deploy": "^0.7.0-beta.44",
     "hardhat-deploy-ethers": "^0.3.0-beta.7",
@@ -24,7 +24,7 @@
     "yesno": "^0.3.1"
   },
   "devDependencies": {
-    "ethers": "^5.0.27",
+    "ethers": "^5.0.29",
     "hardhat": "^2.0.8"
   },
   "scripts": {

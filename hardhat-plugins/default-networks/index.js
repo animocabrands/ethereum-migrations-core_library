@@ -14,4 +14,4 @@ extendConfig((config, userConfig) => {
   }
 });
 
-require('../network-providers');
+require('../node-providers');
